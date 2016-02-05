@@ -2,7 +2,7 @@
 layout: post
 title:  "Axure"
 date:   2016-01-04 18:00:59
-categories: axure
+categories: work axure
 hero: "/assets/axure7.png"
 heroalt: "Axure 7"
 ---

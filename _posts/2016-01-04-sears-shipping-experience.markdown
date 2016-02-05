@@ -2,7 +2,7 @@
 layout: post
 title:  "Sears Shipping Experience"
 date:   2016-01-04 18:00:59
-categories: sears ecommerce
+categories: work sears ecommerce
 hero: "/assets/sears_checkout.png"
 heroalt: "Sears.com checkout shipping page"
 ---

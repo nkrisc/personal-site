@@ -2,7 +2,7 @@
 layout: post
 title:  "Sears Membership"
 date:   2016-01-04 18:00:59
-categories: sears ecommerce membership
+categories: work sears ecommerce membership
 hero: "/assets/chkt_login_usi.png"
 heroalt: "Sears.com membership login"
 ---

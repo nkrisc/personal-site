@@ -2,7 +2,7 @@
 layout: post
 title:  "A Game Experiment"
 date:   2016-01-28 19:50:00
-categories: javascript code
+categories: code javascript
 hero:
 heroalt:
 description: "A small skeleton of a 'game' written in JavaScript for fun."
@@ -18,9 +18,7 @@ description: "A small skeleton of a 'game' written in JavaScript for fun."
 
 There is not much of a game here currently. This is primarily an excercise to learn more about structuring complex programs and modularising code. At the same time, I'm using it as an opportunity to learn more about the new features introduced in ECMAScript 6 (aka the new JavaScript).
 
-Here's an example class from my demo. This is the class for an entity in the game, be it the player, a "monster" or the shots the player shoots.
-
-There are certainly improvements to be made, as it is a work in progress.
+Here's an example class from my demo. This is the class for an entity in the game, be it the player, a "monster" or the shots the player shoots. There are certainly improvements to be made, as it is a work in progress.
 
 You can find the source on [GitHub](https://github.com/nkrisc/game-experiment)
 

@@ -10,3 +10,4 @@ github_username:  nkrisc
 
 # Build settings
 markdown: kramdown
+exclude: [node_modules, Gulpfile.js, README.md, .gitignore]

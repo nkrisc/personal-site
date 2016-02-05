@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "A Game Experiment"
+date:   2016-01-28 19:50:00
+categories: javascript code
+hero:
+heroalt:
+description: "A small skeleton of a 'game' written in JavaScript for fun."
+---
+* Move using the arrow keys.
+* Press 'J' to shoot. 
+* Left-click to place blocks.
+* Right-click to remove them (or shoot them).
+
+<br>
+<script src="/assets/main.js"></script>
+<canvas id="scene" width="500" height="300"></canvas>
+
+There is not much of a game here currently. This is primarily an excercise to learn more about structuring complex programs and modularising code. At the same time, I'm using it as an opportunity to learn more about the new features introduced in ECMAScript 6 (aka the new JavaScript).
+
+Here's an example class from my demo. This is the class for an entity in the game, be it the player, a "monster" or the shots the player shoots.
+
+There are certainly improvements to be made, as it is a work in progress.
+
+You can find the source on [GitHub](https://github.com/nkrisc/game-experiment)
+
+{%highlight javascript linenos %}
+
+class Entity extends GameObject {
+    constructor(type, x, y, update, rest, state, dir) {
+        super(x, y, type, update);
+        this.rest = rest || 10;
+        this.attackRest = rest || 10;
+        this.state = state || 1;
+        this.dir = dir || 0;
+        this.wait = 0;
+        this.attackWait = 0;
+        this.uuid = GameObject.generateUUID();
+
+        this.moveDown = function(steps) {
+            if (Tile.isLegalMove(this.x, this.y + 10) && this.wait >= this.rest) {
+                this.wait = 0;
+                steps = steps || 1;
+                this.y += steps * 10;
+            }
+            this.dir = 0;
+        };
+
+        this.moveRight = function(steps) {
+            if (Tile.isLegalMove(this.x + 10, this.y) && this.wait >= this.rest) {
+                this.wait = 0;
+                steps = steps || 1;
+                this.x += steps * 10;
+            }
+            this.dir = 1;
+        };
+
+        this.moveUp = function(steps) {
+            if (Tile.isLegalMove(this.x, this.y - 10) && this.wait >= this.rest) {
+                this.wait = 0;
+                steps = steps || 1;
+                this.y -= steps * 10;
+            }
+            this.dir = 2;
+        };
+
+        this.moveLeft = function(steps) {
+            if (Tile.isLegalMove(this.x - 10, this.y) && this.wait >= this.rest) {
+                this.wait = 0;
+                steps = steps || 1;
+                this.x -= steps * 10;
+            }
+            this.dir = 3;
+        };
+
+        this.isOffScreen = function() {
+            return !!(this.x > CANVAS_WIDTH || this.x < 0 || this.y > CANVAS_HEIGHT || this.y < 0);
+        };
+
+        this.destroy = function() {
+            ENTITIES.remove(this.uuid);
+        };
+
+        return ENTITIES.add(this);
+    }
+
+
+
+    static find(x, y) {
+        return ENTITIES.find(x, y)
+    }
+
+    static findByUUID(uuid) {
+        return ENTITIES.get(uuid);
+    }
+
+    static all() {
+        return ENTITIES.all();
+    }
+
+}
+{% endhighlight %}

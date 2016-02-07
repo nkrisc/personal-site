@@ -35,7 +35,7 @@ It wasn't long after considering that that I learned about [Jekyll](http://jekyl
 gist of it is that I can write content in individual Markdown files with a
 simple folder structure, and with a quick `jekyll build` my site is ready to 
 go. All the meta data for a post is specified at the start of each file, 
-which can then 3be used in templates.
+which can then be used in templates.
 
 ### Version Control
 
@@ -50,8 +50,8 @@ GitHub so I can work on it from any of my computers.
 
 And we reach the last step: getting my site up onto the web! This was
 pretty easy. I decided to use [Gulp](http://gulpjs.com) to create a task to
-upload my site to my host. I found a great Gulp task [here](http://loige.co/gulp-and-ftp-update-a-website-on-the-fly/) that does it perfectly. A
-final step might be to incorporate Jekyll's build process into that.
+upload my site to my host. I found a great Gulp task [here](http://loige.co/gulp-and-ftp-update-a-website-on-the-fly/) that does it perfectly. One
+last step might be to incorporate Jekyll's build process into that.
 
 ### Conclusion
 Everything I've written about is pretty standard stuff, nothing novel or

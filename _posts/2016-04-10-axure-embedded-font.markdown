@@ -23,9 +23,8 @@ In Axure, go to Publish > Generate HTML Files... > Web Fonts. Click the green pl
 At this point we're going to use Axure's web font feature a little differently than it was intended. Normally you would add a link to a font file hosted on the web somewhere. Instead of giving a URL, we're telling the browser (via the CSS `@font-face` property) that the included string of text is actually a font file, encoded in base 64, and to interpret it as such. The exact details of this will depend on the filetype of the font file you encoded. For this example I've used a `.woff` file:
 
 {%highlight css%}
-    font-family: 'latoregular'; /* replace with font name */
-    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff'),
-     url('lato-reg-webfont.ttf') format('truetype');
+    font-family: 'myfont'; /* replace with font name */
+    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff');
     font-weight: normal; /* replace as applicable */
     font-style: normal; /* replace as applicable */
 {% endhighlight %}

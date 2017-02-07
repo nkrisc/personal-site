@@ -19,9 +19,8 @@ You can embed any font in an Axure prototype. There's a few steps involved:
 
 {% highlight %}
 @font-face {
-    font-family: 'latoregular'; /* replace with font name */
-    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff'),
-     url('lato-reg-webfont.ttf') format('truetype');
+    font-family: 'myfont'; /* replace with font name */
+    src: url(data:application/x-font-woff;charset=utf-8;base64,/*put your base64 encoded file here in place of this comment*/) format('woff')
     font-weight: normal; /* replace as applicable */
     font-style: normal; /* replace as applicable */
 }

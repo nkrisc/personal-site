@@ -17,7 +17,7 @@ If you're using Windows, [see the accepted answer here.](http://stackoverflow.co
 
 Don't worry, this is the hardest part.
 
-### Step 3: Embed the font in Axure
+### Step 2: Embed the font in Axure
 In Axure, go to Publish > Generate HTML Files... > Web Fonts. Click the green plus sign to add a new web font. Choose the @font-face radio button.
 ![Axure web font settings showing above code in place](/assets/axure_embed_1.png)
 At this point we're going to use Axure's web font feature a little differently than it was intended. Normally you would add a link to a font file hosted on the web somewhere. Instead of giving a URL, we're telling the browser (via the CSS `@font-face` property) that the included string of text is actually a font file, encoded in base 64, and to interpret it as such. The exact details of this will depend on the filetype of the font file you encoded. For this example I've used a `.woff` file:

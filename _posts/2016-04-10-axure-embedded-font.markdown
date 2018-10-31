@@ -31,7 +31,7 @@ At this point we're going to use Axure's web font feature a little differently t
 [Source](http://sosweetcreative.com/2613/font-face-and-base64-data-uri).
 _Note, you don't dont to include the usual_ `@font-face {}` _block as Axure will do that for you._
 
-### Step 4: Using the font
+### Step 3: Using the font
 If you have the font installed locally, just choose it within Axure as you would any font and use it. This will set the appropriate `font-family` property in the generated HTML and the embedded font will be used. If for whatever reason you don't have it installed locally (but are embedding it anyway), set up a font mapping for it. If you need help setting up a font mapping, take a look [here](http://www.axure.com/c/forum/tips-tricks-examples/7950-web-fonts-font-mapping.html) on the offical Axure forums.
 
 I hope this helps you create higher fidelity prototypes.

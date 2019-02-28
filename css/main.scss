@@ -181,3 +181,11 @@ code, samp {
   padding: 0.1em 0.2em;
   white-space: nowrap;
 }
+
+.post-meta {
+  display: block;
+}
+
+div .post > a > img {
+  padding-top: 16px;
+}

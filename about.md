@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 ### Me
-I am UX professional living in Washington, DC area. I have experience in service design, transactional e-commerce experiences, online membership experiences, and design strategy. I’ve worked collaboratively with many talented people in various disciplines to bring great experiences to the web.
+I am a UX professional living in Washington, DC area. I have experience in service design, transactional e-commerce experiences, online membership experiences, and design strategy. I’ve worked collaboratively with many talented people in various disciplines to bring great experiences to the web.
 
 ### The Site
 This site serves as my personal space to share some of the highlights of my profressional experience. I may also from time to time post my thoughts on topics that interest me.

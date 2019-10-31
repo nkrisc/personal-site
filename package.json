@@ -18,10 +18,11 @@
     "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "lite-server": "^2.5.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "lite-server -c dev-server-config.json"
   },
   "repository": {
     "type": "git",

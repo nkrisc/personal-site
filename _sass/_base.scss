@@ -202,3 +202,14 @@ pre {
         }
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #CCCCCC;
+        background-color: #202021;
+    }
+
+    a:visited {
+        color: #87B4C0
+    }
+}

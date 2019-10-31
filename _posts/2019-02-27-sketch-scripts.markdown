@@ -2,7 +2,7 @@
 layout: post
 title:  "Formatting Sketch Files With Scripts"
 date:   2019-02-27 16:46:00
-categories: sketch noindex
+categories: sketch
 hero: "/assets/script-hero.png"
 heroalt:
 heroattr:
@@ -16,7 +16,7 @@ The second script is based on the first and is a little simpler. It dumps all th
 
 **format.py**
 [GitHub Gist](https://gist.github.com/nkrisc/9127f1c1ae185a5c459874afee7e299d)
-{% highlight python linenos %}
+{% highlight python %}
 import os
 import zipfile
 import tempfile
@@ -69,7 +69,7 @@ update_file(zipname)
 
 **symbol-names.py**
 [GitHub Gist](https://gist.github.com/nkrisc/afef754770c6c28f7ba7ee232b59716a)
-{% highlight python linenos %}
+{% highlight python %}
 import os
 import zipfile
 import tempfile

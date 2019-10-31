@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating a Good Sketch Symbol"
 date:   2019-02-26 16:25:00
-categories: sketch noindex
+categories: sketch
 hero: "https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550526822197_Screen+Shot+2019-02-18+at+3.53.19+PM.png"
 heroalt:
 heroattr:

@@ -20,11 +20,13 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-util": "^3.0.8",
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "inquirer": "^7.0.0"
   },
   "scripts": {
     "dev": "lite-server -c dev-server-config.json",
-    "dev-live": "gulp jekyll-watch & npm run dev"
+    "dev-live": "gulp jekyll-watch & npm run dev",
+    "post": "node dev/new-post.js"
   },
   "repository": {
     "type": "git",

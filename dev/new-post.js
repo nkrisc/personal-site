@@ -138,7 +138,7 @@ function main() {
             ft += `description: ${frontMatter.description}\n`
             ft += '---\n'
             
-            var fileName = dd + '-' + frontMatter.title.replace(' ', '-') + '.markdown';
+            var fileName = dd + '-' + frontMatter.title.replace(/ /g, '-') + '.markdown';
             fs.writeFile('./_posts/' + fileName, ft, err => {
                 if (err) {
                     throw new Error(err)

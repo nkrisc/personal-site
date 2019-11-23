@@ -104,50 +104,42 @@ function hero() {
     });
 }
 
-function main() {
-    console.log('Creating a new post...')
-    
-    var promptData = new Promise(resolve => {
-        inquirer.prompt(basicQuestions).then(answers => {
-            frontMatter.title = answers.title;
-            frontMatter.categories = answers.categories;
-            frontMatter.description = answers.description;
-    
-            if (answers.hero) {
-                return inquirer.prompt(heroQuestions);
-            } else {
-                return new Promise(resolve => {
-                    resolve()
-                });
-            }
-        }).then(result => {
-            if (result) {
-                frontMatter.hero = result.hero;
-                frontMatter.heroalt = result.heroAlt;
-            }
-            var d = new Date();
-            var dd = formatDate(d);
-            var tt = formatTime(d);
-            var ft = ''
-            ft += '---\n'
-            ft += `layout: ${frontMatter.layout}\n`
-            ft += `date: ${dd} ${tt}\n`
-            ft += `categories: ${frontMatter.categories}\n`
-            ft += `hero: ${frontMatter.hero}\n`
-            ft += `heroalt: ${frontMatter.heroalt}\n`
-            ft += `description: ${frontMatter.description}\n`
-            ft += '---\n'
-            
-            var fileName = dd + '-' + frontMatter.title.replace(' ', '-') + '.markdown';
-            fs.writeFile('./_posts/' + fileName, ft, err => {
-                if (err) {
-                    throw new Error(err)
-                }
-            })
+async function getPromptData() {
+    console.log('Creating new post...');
 
-            console.log('Finished!');
-        });
+    var basicAnswers = await inquirer.prompt(basicQuestions);
+    frontMatter.title = basicAnswers.title;
+    frontMatter.categories = basicAnswers.categories;
+    frontMatter.description = basicAnswers.description;
+
+    if (basicAnswers.hero) {
+        var heroAnswers = await inquirer.prompt(heroQuestions);
+        frontMatter.hero = heroAnswers.hero;
+        frontMatter.heroalt = heroAnswers.heroAlt;
+    }
+
+    var d = new Date();
+    var dd = formatDate(d);
+    var tt = formatTime(d);
+    var ft = ''
+    ft += '---\n'
+    ft += `layout: ${frontMatter.layout}\n`
+    ft += `date: ${dd} ${tt}\n`
+    ft += `categories: ${frontMatter.categories}\n`
+    ft += `hero: ${frontMatter.hero}\n`
+    ft += `heroalt: ${frontMatter.heroalt}\n`
+    ft += `description: ${frontMatter.description}\n`
+    ft += '---\n'
+    
+    var fileName = dd + '-' + frontMatter.title.replace(/ /g, '-') + '.markdown';
+    fs.writeFile('./_posts/' + fileName, ft, err => {
+        if (err) {
+            throw new Error(err)
+        }
     });
+
+    console.log('Finished!');
 }
 
-main()
+
+getPromptData()

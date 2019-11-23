@@ -19,7 +19,7 @@ A good symbol is *flexible*, *extensible,* and *comprehensive*. A flexible symbo
 
 The reality is that likely a single Sketch symbol won’t be enough. There are enough current limitations with how Sketch symbols work that your “symbol” might actually be a few different Sketch symbols that a user can choose from. For example, if you were creating a symbol for tooltips and the pattern allows for the pointer to be on any side as required, you might just need to make four different symbols with the indicator on each side. This does not mean though that you have to make it in a way that isn’t *extensible*.
 
-![Variations of a single pattern, represented by four separate Sketch symbols](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550526822197_Screen+Shot+2019-02-18+at+3.53.19+PM.png)
+![Variations of a single pattern, represented by four separate Sketch symbols](/assets/tooltips1.png)
 
 ## Account for States and Conditions
 
@@ -29,7 +29,7 @@ Before you start creating your symbol, determine what states, conditions, or var
 
 Look at all your states and variations of your symbol. What parts did you duplicate? Identify any part of the symbol that has been defined in more than one place and make that its own symbol. A complex symbol can be made of yet more symbols. In the above example, you can see that the tooltip container, the close icon, the text and the pointer are repeated four times. These are perfect candidates for symbols. For example, the container with the close icon and text can all be made into a generic `Tooltip Body` symbol, the pointer into its own `Pointer` symbol. These can then be combined to symbols for the four variations seen, however each of these four symbols contain nothing but other symbols.
 
-![The symbols that are put together to create different variations of the pattern.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550527446659_Screen+Shot+2019-02-18+at+4.03.57+PM.png)
+![The symbols that are put together to create different variations of the pattern.](/assets/tooltips2.png)
 
 
 Now the text of the tooltip is defined in a single location, the `Tooltip Body` symbol, even though it appears in multiple places. If you wanted to change the tooltip pattern to have blue text instead or a different corner radius, you would only need to make a single update. Likewise the close icon would be its own symbol as well so that if you ever wanted to update the close icon, it is only a single change.
@@ -38,7 +38,7 @@ Now the text of the tooltip is defined in a single location, the `Tooltip Body` 
 
 Consider what parts of your symbol will have different options available, such as different icons that can appear or dynamic text that might change. These are parts of your symbol that you want the user to be able to *override*. In Sketch, overrides are parts of a symbol that the user can configure after they’ve placed it in their document. It might be a button label that they will change, or an icon on a notification depending if it represents a success or failure state. 
 
-![After selecting the symbol’s artboard the Manage Overrides panel in the inspector becomes available.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550587133197_Screen+Shot+2019-02-19+at+8.38.40+AM.png)
+![After selecting the symbol’s artboard the Manage Overrides panel in the inspector becomes available.](/assets/tooltips3.png)
 
 
 At the same, you should consider what parts of the symbol *can’t* be overridden. Perhaps you want the icon of the notification to be changed, but the color should always remain the same. By restricting overrides you help everyone stay consistent with your design guidelines. 
@@ -51,7 +51,7 @@ Another small but important detail regarding symbols is that the labels that app
 
 Most websites these days resize fluidly. While your final Sketch mocks themselves will be static, you might need to represent different sizes of screens, and those different screen sizes might require you to stretch and shrink your symbols. 
 
-![The Resizing panel when selecting a layer in your symbol.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550587995509_Screen+Shot+2019-02-19+at+8.53.05+AM.png)
+![The Resizing panel when selecting a layer in your symbol.](/assets/tooltips4.png)
 
 
 Take a look at the image above. There are three components to the Resizing panel: Pin to Edge, Fix Size, and Preview.
@@ -71,7 +71,7 @@ Beyond simply overriding the text on a text layer, there are three powerful ways
 
 But first, what are layer styles and text styles? If you’re not familiar with them already, they allow you to define commonly used styles for text and layers in a way that lets you easily use them on new layers, helping you keep everything consistent. Layer styles work similarly but define other properties on a layer like fill and border color.
 
-![An example of a text style that defines a Heading, applied to a text layer.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550589256206_Screen+Shot+2019-02-19+at+9.13.27+AM.png)
+![An example of a text style that defines a Heading, applied to a text layer.](/assets/override1.png)
 
 
 **Text Style Overrides**
@@ -80,13 +80,13 @@ Allowing users to override a text style can be useful in a case when a part of y
 **Layer Style Overrides**
 These work similarly to text style overrides. Probably one of the most useful cases for layer style overrides are with icon symbols. When you create an icon symbol that contains a vector shape, you can apply a layer style to it to color it. When someone uses that symbol they can then override the layer style to change the color of the icon.
 
-![An icon symbol with a layer style override.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550591618456_Screen+Shot+2019-02-19+at+9.53.29+AM.png)
+![An icon symbol with a layer style override.](/assets/override2.png)
 
 
 **Symbol Overrides**
 When your symbol contains other symbols, those symbols can be overridden too. There is one caveat: the symbols must exactly the same dimensions to be valid replacements for one another. Icons symbols are a good example of this. If you have three different icon symbols, and the symbol artboards are the same size, you can use a symbol override to swap icons.
 
-![An example of a symbol override allowing the replacement of an icon.](https://d2mxuefqeaa7sj.cloudfront.net/s_E7DF8B30F7C8D28B2EF4A29FE95D469F68FDBF8B7621A57B3329D48C6F951C9B_1550591740371_Screen+Shot+2019-02-19+at+9.55.31+AM.png)
+![An example of a symbol override allowing the replacement of an icon.](/assets/override3.png)
 
 
 

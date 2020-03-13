@@ -3,6 +3,7 @@ _site
 .idea
 .jekyll-cache
 .vscode
+.env
 node_modules
 gulpfile.js
 package-lock.json

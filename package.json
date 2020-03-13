@@ -18,15 +18,21 @@
     "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-liquidjs": "^1.0.2",
+    "gulp-markdown": "^5.0.1",
+    "gulp-rsync": "0.0.8",
     "gulp-util": "^3.0.8",
     "inquirer": "^7.0.0",
     "lite-server": "^2.5.4"
   },
   "scripts": {
-    "dev": "lite-server -c dev-server-config.json",
-    "dev-live": "gulp jekyll-watch & npm run dev",
-    "post": "node dev/new-post.js"
+    "dev": "lite-server -c bs-config.json",
+    "dev-live": "gulp watch & npm run dev",
+    "post": "node dev/new-post.js",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",

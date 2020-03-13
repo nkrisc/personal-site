@@ -1,5 +1,6 @@
 ---
 layout: post
+title: VDP Design Strategy
 date: 2019-11-11 18:48:20
 categories: work cars
 hero: /assets/vdp-hero.png

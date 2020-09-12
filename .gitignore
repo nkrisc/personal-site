@@ -5,7 +5,6 @@ _site
 .vscode
 .env
 node_modules
-gulpfile.js
 package-lock.json
 tasks.json
 dev-server-config.json

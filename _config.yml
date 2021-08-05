@@ -11,4 +11,4 @@ github_username:  nkrisc
 # Build settings
 markdown: kramdown
 highlighter: rouge
-exclude: [node_modules, Gulpfile.js, gulpfile.js, bs-config.json, README.md, .gitignore, package-lock.json, package.json, dev-server-config.json, dev]
+exclude: [node_modules, Gulpfile.js, gulpfile.js, bs-config.json, README.md, .gitignore, package-lock.json, package.json, dev-server-config.json, dev, archived]

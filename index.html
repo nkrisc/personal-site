@@ -9,7 +9,7 @@ layout: default
         <h2>
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <!--<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>-->
         {% if post.hero %}<a href="{{ post.url | prepend: site.baseurl }}" alt="{{ post.title }}">
           <img alt="{{post.heroalt}}" src="{{post.hero}}">
         </a>{% endif %}
